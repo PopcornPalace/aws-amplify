@@ -1217,7 +1217,7 @@ export default class AuthClass {
         return this._loadCredentials(credentials, 'guest', false, null);
     }
 
-    private _setCredentialsFromSession(session) {
+    public _setCredentialsFromSession(session) {
         logger.debug('set credentials from session');
         const idToken = session.getIdToken().getJwtToken();
         const { region, userPoolId, identityPoolId } = this._config;
